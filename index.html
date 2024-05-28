@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div># of buttons clicked: <span id="clicked-01">0</span></div>
+    <div># of form submitted: <span id="submitted-01">0</span></div>
+    <form id="form-01">
+        <button type="button" id="btn-click">CLICK ME</button><br />
+        <button type="submit" id="submit-click">SUBMIT ME</button><br />
+    </form>
+
+    <script>
+        let clicked = 0;
+        let submitted = 0;
+        const form01 = document.getElementById('form-01');
+        const btnClick = document.getElementById('btn-click');
+        const clicked01 = document.getElementById('clicked-01');
+        const submitted01 = document.getElementById('submitted-01');
+
+        btnClick.onclick = () => {
+            clicked++;
+            clicked01.innerHTML = clicked;
+        }
+
+        form01.onsubmit = (ev) => {
+            ev.preventDefault();
+            submitted++;
+            submitted01.innerHTML = submitted;
+        }
+    </script>
+</body>
+
+</html>

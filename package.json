@@ -14,10 +14,12 @@
   "keywords": [],
   "author": "Cypress-io",
   "license": "ISC",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/cypress-io/cypress-test-tiny.git"
+  },
+  "dependencies": {
+    "cypress": "^13.10.0"
   }
 }
